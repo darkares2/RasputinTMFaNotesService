@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasputinTMFaNotesService", "RasputinTMFaNotesService\RasputinTMFaNotesService.csproj", "{2359B3B9-CEE0-445B-967D-8FC6C06A3B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasputinTMFaNotesServiceTests", "RasputinTMFaNotesServiceTests\RasputinTMFaNotesServiceTests.csproj", "{DFE7306B-D463-4FE4-9645-0EDCBCDCE79B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C2DD2AE-2B8E-4DE1-90E2-8FE32745400C}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\buildanddeploy.yaml = .github\workflows\buildanddeploy.yaml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2359B3B9-CEE0-445B-967D-8FC6C06A3B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2359B3B9-CEE0-445B-967D-8FC6C06A3B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2359B3B9-CEE0-445B-967D-8FC6C06A3B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2359B3B9-CEE0-445B-967D-8FC6C06A3B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE7306B-D463-4FE4-9645-0EDCBCDCE79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE7306B-D463-4FE4-9645-0EDCBCDCE79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE7306B-D463-4FE4-9645-0EDCBCDCE79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE7306B-D463-4FE4-9645-0EDCBCDCE79B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B208E5F5-A64F-456A-8716-34C3BC47A3A9}
+	EndGlobalSection
+EndGlobal
