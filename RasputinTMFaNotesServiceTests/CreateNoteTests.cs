@@ -27,7 +27,7 @@ namespace RasputinTMFaNoteServiceTests
         public async Task CreateNoteNew()
         {
             //Arrange
-            CreateNoteRequest createNoteRequest = new CreateNoteRequest() { SessionID = Guid.NewGuid(), Notes = "Some new notes" };
+            CreateNoteRequest createNoteRequest = new CreateNoteRequest() { SessionID = Guid.NewGuid(), Notes = "Some new notes", UserID = Guid.NewGuid() };
             var context = new DefaultHttpContext();
             var request = context.Request;
             request.Body = Serialize(createNoteRequest);
@@ -44,9 +44,11 @@ namespace RasputinTMFaNoteServiceTests
             Assert.Equal(200, result.StatusCode);
             Note sessionResult = (Note)JsonConvert.DeserializeObject((string)result.Value, typeof(Note));
             Assert.Equal(createNoteRequest.SessionID, sessionResult.SessionID);
+            Assert.Equal(createNoteRequest.UserID, sessionResult.UserID);
             tblNoteMock.Verify(_ => _.ExecuteAsync(It.IsAny<TableOperation>()), Times.Exactly(1));
             Assert.NotNull(operation.Entity);
             Assert.Equal(createNoteRequest.SessionID, ((Note)operation.Entity).SessionID);
+            Assert.Equal(createNoteRequest.UserID, ((Note)operation.Entity).UserID);
             Assert.Equal(createNoteRequest.Notes, ((Note)operation.Entity).Notes);
         }
     }

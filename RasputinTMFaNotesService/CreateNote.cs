@@ -25,7 +25,7 @@ namespace RasputinTMFaNotesService
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             CreateNoteRequest data = (CreateNoteRequest)JsonConvert.DeserializeObject(requestBody, typeof(CreateNoteRequest));
 
-            Note session = await NoteService.InsertNote(log, tblNote, data.SessionID, data.Notes);
+            Note session = await NoteService.InsertNote(log, tblNote, data.SessionID, data.UserID, data.Notes);
 
             string responseMessage = JsonConvert.SerializeObject(session);
             return new OkObjectResult(responseMessage);
