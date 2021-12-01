@@ -12,10 +12,10 @@ namespace RasputinTMFaNotesService
     {
         public static async Task<Note> InsertNote(ILogger log, CloudTable tblNote, Guid sessionID, Guid userID, string notes)
         {
-            Note session = new Note(sessionID, userID, notes);
-            TableOperation operation = TableOperation.Insert(session);
+            Note note = new Note(sessionID, userID, notes);
+            TableOperation operation = TableOperation.Insert(note);
             await tblNote.ExecuteAsync(operation);
-            return session;
+            return note;
         }
 
         public static async Task<Note[]> FindSessionNotes(ILogger log, CloudTable tblNote, Guid sessionID)
